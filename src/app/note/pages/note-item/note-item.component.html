@@ -1,0 +1,23 @@
+<form [formGroup]="noteForm" class="note-form">
+    <div class="note-form-title">
+      <div class="note-title-label">NOTE TITLE</div>
+      <input type="text" class="title" formControlName="noteTitle"
+        [ngClass]="{error:this.noteForm.get('noteTitle')?.invalid && this.noteForm.get('noteTitle')?.touched}">
+    </div>
+    <div class="note-form-text">
+      <div class="note-text-label">YOUR NOTE</div>
+      <textarea name="note" id="note" class="note" cols="30" rows="10" formControlName="noteText"
+        [ngClass]="{error:this.noteForm.get('noteText')?.invalid && this.noteForm.get('noteText')?.touched}"></textarea>
+    </div>
+    <div class="note-form-type">
+      <select name="note-type" class="note-type" formControlName="noteType" [ngClass]="{error:this.noteForm.get('noteType')?.invalid && this.noteForm.get('noteType')?.touched}">
+        <option value="{{item.id}}" *ngFor="let item of MyNotesService.noteType">{{item.type}}</option>
+      </select>
+      <input type="text" class="new-type" formControlName="newType">
+      <button class="create" (click)="onTypeCreate();">+</button>
+      <button class="delete" (click)="onTypeDelete();" *ngIf="this.noteForm.get('noteType')?.value!=1">-</button>
+    </div>
+    <button class="create" (click)="onSave()" [disabled]="noteForm.invalid">Create Note</button>
+    <button class="clear" (click)="clearData();">Clear Note</button>
+    <button class="delete" (click)="onNoteDelete();" *ngIf="id">Delete Note</button>
+  </form>

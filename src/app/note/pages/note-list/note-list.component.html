@@ -1,0 +1,13 @@
+<div class="header">
+    <div class="button-box">
+        <button class="create" (click)="linkToItem()">Create</button>
+    </div>
+</div>
+<div class="container">
+    <div class="note-block" (click)="linkToItem(note.id)" *ngFor="let note of MyNotesService.notes">
+            <div class="note-title">{{note.noteTitle}}</div>
+            <div class="note-text">{{note.noteText}}</div>
+            <div class="note-type">{{getTypeLabel(note.noteType)}}</div>
+            <div class="note-date">{{note.noteCreateTime + " " + note.noteCreateDate}}</div>
+    </div>
+</div>

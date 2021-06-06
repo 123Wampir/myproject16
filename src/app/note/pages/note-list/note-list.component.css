@@ -1,0 +1,66 @@
+.header{
+    display: flex;
+    background-color: rgb(71, 204, 175);
+    padding: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(44, 112, 95);
+    margin-bottom: 15px;
+    justify-content: space-around;
+}
+.create{
+    margin: 5px;
+    padding: 5px 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(0, 255, 200);
+    border:2px outset rgb(0, 255, 200);
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.note-block{
+    background-color: rgb(71, 204, 175);
+    padding: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(44, 112, 95);
+    margin-bottom: 15px;
+    border-bottom-right-radius: 20px;
+
+    cursor: pointer;
+}
+.note-title{
+    font-size: 30px;
+    font-family:monospace;
+    font-weight: 700;
+    color: rgb(44, 112, 95);
+}
+.note-type{
+    margin: 5px;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 3px 5px;
+    background-color: rgb(142, 236, 216);
+    font-size: 12px;
+    font-family:monospace;
+    font-weight: 700;
+    color: rgb(44, 112, 95);
+}
+.note-text{
+    font-size: 30px;
+    font-family:monospace;
+    font-weight: 500;
+    color: rgb(44, 112, 95);
+}
+.note-date{
+    font-size: 16px;
+    font-family:monospace;
+    font-weight: 500;
+    color: rgb(44, 112, 95);
+}
